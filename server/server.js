@@ -7,10 +7,10 @@ const schema = require('./schema/schema');
 
 const app = express();
 
-// Replace with your MongoAtlas URI
+// Replace with your MongoDBAtlas URI
 const MONGO_URI = 'mongodb+srv://george:7cAIhnkQqO3BYl4n@sandbox-dhazd.gcp.mongodb.net/lyrical?retryWrites=true&w=majority';
 if (!MONGO_URI) {
-  throw new Error('You must provide a MongoAtlas URI');
+  throw new Error('You must provide a MongoDBAtlas URI');
 }
 
 mongoose.Promise = global.Promise;
@@ -19,8 +19,8 @@ mongoose.connect(MONGO_URI, {
   useUnifiedTopology: true
 });
 mongoose.connection
-    .once('open', () => console.log('Connected to MongoAtlas instance.'))
-    .on('error', error => console.log('Error connecting to MongoAtlas:', error));
+    .once('open', () => console.log('Connected to MongoDBAtlas instance.'))
+    .on('error', error => console.log('Error connecting to MongoDBAtlas:', error));
 
 app.use(bodyParser.json());
 app.use('/graphql', expressGraphQL({

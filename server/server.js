@@ -10,7 +10,7 @@ const app = express();
 // Replace with your mongoLab URI
 const MONGO_URI = 'mongodb+srv://george:7cAIhnkQqO3BYl4n@sandbox-dhazd.gcp.mongodb.net/lyrical?retryWrites=true&w=majority';
 if (!MONGO_URI) {
-  throw new Error('You must provide a MongoLab URI');
+  throw new Error('You must provide a MongoAtlas URI');
 }
 
 mongoose.Promise = global.Promise;
@@ -19,8 +19,8 @@ mongoose.connect(MONGO_URI, {
   useUnifiedTopology: true
 });
 mongoose.connection
-    .once('open', () => console.log('Connected to MongoLab instance.'))
-    .on('error', error => console.log('Error connecting to MongoLab:', error));
+    .once('open', () => console.log('Connected to MongoAtlas instance.'))
+    .on('error', error => console.log('Error connecting to MongoAtlas:', error));
 
 app.use(bodyParser.json());
 app.use('/graphql', expressGraphQL({

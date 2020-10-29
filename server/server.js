@@ -8,7 +8,7 @@ const schema = require('./schema/schema');
 const app = express();
 
 // Replace with your MongoDBAtlas URI
-const MONGO_URI = 'mongodb+srv://george:7cAIhnkQqO3BYl4n@sandbox-dhazd.gcp.mongodb.net/lyrical?retryWrites=true&w=majority';
+const MONGO_URI = 'mongodb+srv://george:7cAIhnkQqO3BYl4n@sandbox.dhazd.gcp.mongodb.net/lyrical?retryWrites=true&w=majority';
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoDBAtlas URI');
 }

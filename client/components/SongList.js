@@ -19,7 +19,7 @@ class SongList extends Component {
             {title}
           </Link>
           <i
-            className="material-icons"
+            className="material-icons delete-icon"
             onClick={() => this.onSongDelete(id)}
           >
             delete

@@ -5,5 +5,8 @@
 
 .material-icons {
   cursor: pointer;
+}
+
+.material-icons.delete-icon {
   color: red;
 }

@@ -5,8 +5,18 @@
 
 .material-icons {
   cursor: pointer;
+  margin-right: 5px;
 }
 
 .material-icons.delete-icon {
   color: red;
+}
+
+.material-icons.like-icon {
+  color: blue;
+}
+
+.vote-box {
+  display: flex;
+  align-items: center;
 }
